@@ -15,5 +15,5 @@ public class Category extends BaseModel {
     private String name;
     private String description;
     @OneToMany(mappedBy = "category")
-    private List<Product> products; // by default List is lazily loaded
+    private List<Product> products;
 }

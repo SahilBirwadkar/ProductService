@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service("fakestoreservice")
 public class FakeStoreProductService implements ProductService {
 
     private RestTemplate restTemplate;
@@ -69,5 +69,10 @@ public class FakeStoreProductService implements ProductService {
 
 
         return responseDto.toProduct();
+    }
+
+    @Override
+    public Product partialUpdate(Long id, Product product) {
+        return null;
     }
 }
